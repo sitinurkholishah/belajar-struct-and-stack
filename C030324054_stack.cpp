@@ -40,3 +40,30 @@ void Push(stokItem x, Stack *S){
         ++(S->Count);
     }
 }
+
+int main(){
+    Stack Gudang;
+    stokItem *B = Gudang.Barang;
+
+    initializeStack(&Gudang);
+
+    Pop(&Gudang, B);
+    Push(35, &Gudang);
+    
+    Push(56, &Gudang);
+    Push(13, &Gudang);
+    Push(12, &Gudang);
+    Pop(&Gudang, B);
+
+    Push(76, &Gudang);
+    Push(34, &Gudang);
+    Push(87, &Gudang);
+    Push(99, &Gudang);
+    Push(10, &Gudang);
+    Push(45, &Gudang);
+    Push(54, &Gudang);
+    Push(71, &Gudang);
+    
+    Pop(&Gudang, B);
+    Push(32, &Gudang);
+}
