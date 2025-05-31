@@ -30,3 +30,13 @@ void Pop(Stack *S, stokItem *x){
         cout << "Barang dengan ID " << *x << " berhasil diambil dari gudang" << endl;
     }
 }
+
+void Push(stokItem x, Stack *S){
+    if (Full(S))
+        cout << "Gudang penuh! Barang tidak dapat disimpan!" << endl;
+    else{
+        S->Barang[S->Count] = x;
+        cout << "Barang dengan ID " << x << " berhasil ditambahkan ke gudang" << endl;
+        ++(S->Count);
+    }
+}
